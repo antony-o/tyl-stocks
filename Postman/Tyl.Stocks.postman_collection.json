@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "bdf851ca-c271-405b-9987-2e24dc288f88",
+		"name": "Tyl.Stocks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/api/stock/{ticker}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7283/api/stock/SMB",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7283",
+					"path": [
+						"api",
+						"stock",
+						"SMB"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/stock/list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7283/api/stock/list",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7283",
+					"path": [
+						"api",
+						"stock",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/trade",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idempotencyId\": \"42a85f30-936f-460e-a398-c64efd75ba4c\",\r\n    \"ticker\": \"SMB\",\r\n    \"numOfShares\": 55,\r\n    \"price\": 5.00,\r\n    \"brokerId\": 1,\r\n    \"timestamp\": \"2022-03-29T19:10:16.3669757Z\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7283/api/trade",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7283",
+					"path": [
+						"api",
+						"trade"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/stock/listrange",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[ \r\n    \"SMB\",\r\n    \"ABC\"\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7283/api/stock/listrange",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7283",
+					"path": [
+						"api",
+						"stock",
+						"listrange"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
